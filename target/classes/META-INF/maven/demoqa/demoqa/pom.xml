@@ -22,6 +22,16 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>DBTesting</groupId>
+			<artifactId>DBTesting</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>MagentoTesting</groupId>
+			<artifactId>MagentoTesting</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

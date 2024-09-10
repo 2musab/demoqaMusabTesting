@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-06T00:23:28 AST" name="Default suite" finished-at="2024-09-06T00:23:48 AST" duration-ms="19513">
+  <suite started-at="2024-09-10T23:36:44 AST" name="Default suite" finished-at="2024-09-10T23:37:01 AST" duration-ms="16971">
     <groups>
     </groups>
-    <test started-at="2024-09-06T00:23:28 AST" name="Default test" finished-at="2024-09-06T00:23:48 AST" duration-ms="19513">
+    <test started-at="2024-09-10T23:36:44 AST" name="Default test" finished-at="2024-09-10T23:37:01 AST" duration-ms="16971">
       <class name="demoqa.Elements">
-        <test-method is-config="true" signature="mySetup()[pri:0, instance:demoqa.Elements@2c1b9e4b]" started-at="2024-09-06T00:23:28 AST" name="mySetup" finished-at="2024-09-06T00:23:33 AST" duration-ms="4740" status="PASS">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:demoqa.Elements@4eed46ee]" started-at="2024-09-10T23:36:44 AST" name="mySetup" finished-at="2024-09-10T23:36:48 AST" duration-ms="3775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetup -->
-        <test-method signature="checkBox()[pri:2, instance:demoqa.Elements@2c1b9e4b]" started-at="2024-09-06T00:23:33 AST" name="checkBox" finished-at="2024-09-06T00:23:48 AST" duration-ms="14744" status="PASS">
+        <test-method signature="doubleClick()[pri:0, instance:demoqa.Elements@4eed46ee]" started-at="2024-09-10T23:36:48 AST" name="doubleClick" finished-at="2024-09-10T23:37:01 AST" duration-ms="13156" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkBox -->
+        </test-method> <!-- doubleClick -->
       </class> <!-- demoqa.Elements -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

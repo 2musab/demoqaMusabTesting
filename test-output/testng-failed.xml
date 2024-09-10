@@ -6,7 +6,7 @@
       <class name="demoqa.Elements">
         <methods>
           <include name="mySetup"/>
-          <include name="checkBox"/>
+          <include name="radio"/>
         </methods>
       </class> <!-- demoqa.Elements -->
     </classes>
