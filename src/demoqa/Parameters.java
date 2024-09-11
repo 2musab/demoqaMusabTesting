@@ -4,6 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class Parameters {
@@ -31,6 +32,9 @@ public class Parameters {
 	int lastNamesLength = lastNames.length;
 	int randomLastName = rand.nextInt(lastNamesLength);
 	String surName = lastNames[randomLastName];
+	
+	Actions action = new Actions(driver);
+	Actions right = new Actions(driver);
 	
 
 }

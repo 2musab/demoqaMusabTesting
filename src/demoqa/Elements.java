@@ -16,13 +16,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import net.bytebuddy.build.Plugin.Factory.UsingReflection.Priority;
+
 public class Elements extends Parameters {
 
 	@BeforeTest
 	public void mySetup() {
 
-		driver.get("https://demoqa.com/");
-		driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
@@ -117,18 +118,29 @@ public class Elements extends Parameters {
 
 	}
 
-	@Test
-	public void doubleClick() {
+	@Test(invocationCount = 10)
+	public void click() throws InterruptedException {
 
 		driver.get("https://demoqa.com/buttons");
 
 		Actions action = new Actions(driver);
-
-		WebElement doubleClick = driver.findElement(By.id("doubleClickBtn"));
-		action.doubleClick(doubleClick).perform();
+		WebElement DoubleClick = driver.findElement(By.id("doubleClickBtn"));
+		action.doubleClick(DoubleClick).perform();
 
 		WebElement rightClick = driver.findElement(By.id("rightClickBtn"));
 		action.contextClick(rightClick).perform();
+
+		WebElement dynamic = driver
+				.findElement(By.cssSelector("div[class='col-12 mt-4 col-md-6'] div div:nth-child(4)"));
+		List<WebElement> dynamicClickList = dynamic.findElements(By.tagName("button"));
+		String id = dynamicClickList.getLast().getAttribute("id");
+
+		System.out.println(id);
+
+		WebElement dynamicId = driver.findElement(By.id(id));
+
+		dynamicId.click();
+
 	}
 
 	@Test(enabled = false)
@@ -143,6 +155,17 @@ public class Elements extends Parameters {
 		String expectedRadio = "You have selected Impressive";
 
 		Assert.assertEquals(actualRadio, expectedRadio);
+	}
+
+	@Test(enabled = false)
+	public void dyanamic() throws InterruptedException {
+
+		driver.get("https://demoqa.com/dynamic-properties");
+
+		WebElement enabledButton = driver.findElement(By.id("enableAfter"));
+		Thread.sleep(5000);
+		enabledButton.click();
+
 	}
 
 }
